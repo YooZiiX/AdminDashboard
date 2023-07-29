@@ -11,8 +11,8 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 /* CONFIGURATION */
-dotenv.config();
 const app = express();
+dotenv.config();
 app.use(express.json());
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
@@ -26,3 +26,15 @@ app.use("/client", clientRoutes);
 app.use("/general", generalRoutes);
 app.use("/management", managementRoutes);
 app.use("/sales", salesRoutes);
+
+/* MONGOOSE SETUP */
+const PORT = process.env.PORT || 9000;
+mongoose
+  .connect(process.env.MONGO_URI, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  })
+  .then(() => {
+    app.listen(PORT, () => console.log(`Server is running on PORT : ${PORT}`));
+  })
+  .catch((error) => console.log(`Error -> ${error}`));
