@@ -41,6 +41,6 @@ mongoose
     app.listen(PORT, () => console.log(`Server is running on PORT : ${PORT}`));
 
     /* ADD USER ONCE */
-    User.insertMany(dataUser);
+    // User.insertMany(dataUser);
   })
   .catch((error) => console.log(`Error -> ${error}`));
