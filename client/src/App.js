@@ -4,6 +4,8 @@ import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { themeSettings } from "theme";
+import Layout from "components/Layout";
+import Dashboard from "components/Dashboard";
 
 function App() {
   const mode = useSelector((state) => StarRateTwoTone.global.mode);
