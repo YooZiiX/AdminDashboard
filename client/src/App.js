@@ -4,11 +4,11 @@ import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { themeSettings } from "theme";
-import Layout from "components/Layout";
-import Dashboard from "components/Dashboard";
+import Layout from "scenes/Layout";
+import Dashboard from "scenes/Dashboard";
 
 function App() {
-  const mode = useSelector((state) => StarRateTwoTone.global.mode);
+  const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
   return (
     <div className="app">
