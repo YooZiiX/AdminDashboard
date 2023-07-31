@@ -11,7 +11,9 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 import User from "./models/User.js";
-import { dataUser } from "./data/data.js";
+import Product from "./models/Product.js";
+import ProductStat from "./models/ProductStat.js";
+import { dataUser, dataProduct, dataProductStat } from "./data/data.js";
 
 /* CONFIGURATION */
 const app = express();
@@ -42,5 +44,7 @@ mongoose
 
     /* ADD USER ONCE */
     // User.insertMany(dataUser);
+    Product.insertMany(dataProduct);
+    ProductStat.insertMany(dataProductStat);
   })
   .catch((error) => console.log(`Error -> ${error}`));
