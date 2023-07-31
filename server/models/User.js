@@ -23,7 +23,7 @@ const UserSchema = new mongoose.Schema(
     state: String,
     country: String,
     occupation: String,
-    phonNumber: String,
+    phoneNumber: String,
     transactions: Array,
     role: {
       type: String,
