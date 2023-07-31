@@ -4,7 +4,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import Layout from "scenes/Layout";
 import Dashboard from "scenes/Dashboard";
 
-export default function Router({ theme }) {
+function Router({ theme }) {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
@@ -19,3 +19,5 @@ export default function Router({ theme }) {
     </BrowserRouter>
   );
 }
+
+export default Router;
