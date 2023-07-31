@@ -4,6 +4,7 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import Layout from "scenes/Layout";
 import Dashboard from "scenes/Dashboard";
 import Products from "scenes/Products";
+import Customers from "scenes/Customers";
 
 function Router({ theme }) {
   return (
@@ -15,6 +16,7 @@ function Router({ theme }) {
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/customers" element={<Customers />} />
           </Route>
         </Routes>
       </ThemeProvider>
