@@ -44,7 +44,7 @@ mongoose
 
     /* ADD USER ONCE */
     // User.insertMany(dataUser);
-    Product.insertMany(dataProduct);
-    ProductStat.insertMany(dataProductStat);
+    // Product.insertMany(dataProduct);
+    // ProductStat.insertMany(dataProductStat);
   })
   .catch((error) => console.log(`Error -> ${error}`));
