@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const TransactionSchema = mongoose.Schema(
+const TransactionSchema = new mongoose.Schema(
   {
     userId: String,
     cost: String,
