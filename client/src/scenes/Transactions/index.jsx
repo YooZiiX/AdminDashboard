@@ -12,6 +12,13 @@ const Transactions = () => {
   const [sort, setSort] = useState({});
   const [search, setSearch] = useState("");
 
+  const { data, isLoading } = useGetTransactionsQuery({
+    page,
+    pageSize,
+    sort: JSON.stringify(sort),
+    search,
+  });
+
   return (
     <Box>
       <Header title="Transactions" subtitle="Entire list of transactions." />
