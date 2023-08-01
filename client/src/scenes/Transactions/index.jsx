@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { Box, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { useGetTransactionsQuery } from "state/api";
-import Header from "../../components/Header";
-import DataGridCustomToolbar from "../../components/DataGridCustomToolbar";
+import Header from "components/Header";
+import DataGridCustomToolbar from "components/DataGridCustomToolbar";
 
 const Transactions = () => {
   const theme = useTheme();
 
+  // values to be sent to the backend
   const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(20);
   const [sort, setSort] = useState({});
@@ -39,7 +40,7 @@ const Transactions = () => {
     },
     {
       field: "products",
-      headerName: "# of products",
+      headerName: "# of Products",
       flex: 0.5,
       sortable: false,
       renderCell: (params) => params.value.length,
@@ -54,12 +55,16 @@ const Transactions = () => {
 
   return (
     <Box m="1.5rem 2.5rem">
-      <Header title="Transactions" subtitle="Entire list of transactions." />
+      <Header title="TRANSACTIONS" subtitle="Entire list of transactions" />
       <Box
         height="80vh"
         sx={{
-          "& .MuiDataGrid-root": { border: "none" },
-          "& .MuiDataGrid-cell": { borderBottom: "none" },
+          "& .MuiDataGrid-root": {
+            border: "none",
+          },
+          "& .MuiDataGrid-cell": {
+            borderBottom: "none",
+          },
           "& .MuiDataGrid-columnHeaders": {
             backgroundColor: theme.palette.background.alt,
             color: theme.palette.secondary[100],
@@ -71,10 +76,10 @@ const Transactions = () => {
           "& .MuiDataGrid-footerContainer": {
             backgroundColor: theme.palette.background.alt,
             color: theme.palette.secondary[100],
-            borderBottom: "none",
+            borderTop: "none",
           },
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: `theme.palette.secondary[200] !important`,
+            color: `${theme.palette.secondary[200]} !important`,
           },
         }}
       >
@@ -93,8 +98,10 @@ const Transactions = () => {
           onPageChange={(newPage) => setPage(newPage)}
           onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
           onSortModelChange={(newSortModel) => setSort(...newSortModel)}
-          components={{ Toolbar: DataGridCustomToolbar }}
-          componentsProps={{
+          slots={{
+            toolbar: DataGridCustomToolbar,
+          }}
+          slotProps={{
             toolbar: { searchInput, setSearchInput, setSearch },
           }}
         />
