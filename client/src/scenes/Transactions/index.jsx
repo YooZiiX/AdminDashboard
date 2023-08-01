@@ -3,6 +3,7 @@ import { Box, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { useGetTransactionsQuery } from "state/api";
 import Header from "../../components/Header";
+import DataGridCustomToolbar from "../../components/DataGridCustomToolbar";
 
 const Transactions = () => {
   const theme = useTheme();
@@ -89,7 +90,8 @@ const Transactions = () => {
           sortingMode="server"
           onPageChange={(newPage) => setPage(newPage)}
           onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
-          onSortModelChange={(newSortModel) => setSort(newSortModel)}
+          onSortModelChange={(newSortModel) => setSort(...newSortModel)}
+          components={{ Toolbar: DataGridCustomToolbar }}
         />
       </Box>
     </Box>
