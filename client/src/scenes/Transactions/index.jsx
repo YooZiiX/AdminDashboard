@@ -19,6 +19,31 @@ const Transactions = () => {
     search,
   });
 
+  const columns = [
+    {
+      field: "_id",
+      headerName: "ID",
+      flex: 1,
+    },
+    {
+      field: "userId",
+      headerName: "User ID",
+      flex: 1,
+    },
+    {
+      field: "createdAt",
+      headerName: "CreatedAt",
+      flex: 1,
+    },
+    {
+      field: "products",
+      headerName: "# of products",
+      flex: 0.5,
+      sortable: false,
+      renderCell: (params) => params.value.length,
+    },
+  ];
+
   return (
     <Box>
       <Header title="Transactions" subtitle="Entire list of transactions." />
