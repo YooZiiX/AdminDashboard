@@ -6,6 +6,7 @@ import Header from "components/Header";
 import DataGridCustomToolbar from "components/DataGridCustomToolbar";
 
 const Transactions = () => {
+  document.title = "Transactions";
   const theme = useTheme();
 
   // values to be sent to the backend

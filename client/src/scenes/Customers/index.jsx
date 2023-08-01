@@ -5,6 +5,7 @@ import { useGetCustomersQuery } from "state/api";
 import Header from "components/Header";
 
 const Customers = () => {
+  document.title = "Customers";
   const theme = useTheme();
   const { data, isLoading } = useGetCustomersQuery();
   console.log("data", data);
