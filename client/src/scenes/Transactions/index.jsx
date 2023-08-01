@@ -5,6 +5,13 @@ import { useGetTransactionsQuery } from "state/api";
 import Header from "../../components/Header";
 
 const Transactions = () => {
+  const theme = useTheme();
+
+  const [page, setPage] = useState(0);
+  const [pageSize, setPageSize] = useState(20);
+  const [sort, setSort] = useState({});
+  const [search, setSearch] = useState("");
+
   return (
     <Box>
       <Header title="Transactions" subtitle="Entire list of transactions." />
