@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  useTheme,
-  FormControl,
-  MenuItem,
-  InputLabel,
-  Select,
-} from "@mui/material";
+import { Box, FormControl, MenuItem, InputLabel, Select } from "@mui/material";
 import Header from "components/Header";
 import OverviewChart from "components/OverviewChart";
 
