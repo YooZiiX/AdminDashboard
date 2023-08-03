@@ -6,6 +6,7 @@ import { useGetSalesQuery } from "state/api";
 
 //Ajouter un selecteur de courbure (curve="catmullRom")
 const Monthly = () => {
+  document.title = "Monthly";
   const theme = useTheme();
   const { data } = useGetSalesQuery();
 
