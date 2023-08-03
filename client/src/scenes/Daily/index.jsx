@@ -7,7 +7,7 @@ import { useGetSalesQuery } from "state/api";
 
 const Daily = () => {
   const theme = useTheme();
-  const [startDate, setSstartDate] = useState(new Date("2021-02-01"));
+  const [startDate, setStartDate] = useState(new Date("2021-02-01"));
   const [endDate, setEndDate] = useState(new Date("2021-03-01"));
   const { data } = useGetSalesQuery();
 
@@ -50,7 +50,25 @@ const Daily = () => {
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="Daily" subtitle="" />
-      <Box></Box>
+      <Box height="75vh">
+        <Box display="flex" justifyContent="flex-end">
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            selectedStart
+            startDate={startDate}
+            endDate={endDate}
+          />
+          <DatePicker
+            selected={endDate}
+            onChange={(date) => setEndDate(date)}
+            selectedEnd
+            startDate={startDate}
+            endDate={endDate}
+            minDate={startDate}
+          />
+        </Box>
+      </Box>
     </Box>
   );
 };
