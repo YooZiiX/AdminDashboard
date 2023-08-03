@@ -52,7 +52,7 @@ const Daily = () => {
     <Box m="1.5rem 2.5rem">
       <Header title="Daily" subtitle="" />
       <Box height="75vh">
-        <Box display="flex" justifyContent="flex-end">
+        <Box display="flex" justifyContent="flex-end" gap="0.5rem">
           <Box>
             <ReactDatePicker
               selected={startDate}
