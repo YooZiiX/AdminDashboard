@@ -52,14 +52,14 @@ const Daily = () => {
       <Header title="Daily" subtitle="" />
       <Box height="75vh">
         <Box display="flex" justifyContent="flex-end">
-          <DatePicker
+          <ReactDatePicker
             selected={startDate}
             onChange={(date) => setStartDate(date)}
             selectedStart
             startDate={startDate}
             endDate={endDate}
           />
-          <DatePicker
+          <ReactDatePicker
             selected={endDate}
             onChange={(date) => setEndDate(date)}
             selectedEnd
