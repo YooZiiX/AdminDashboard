@@ -7,6 +7,7 @@ import Header from "components/Header";
 import { useGetSalesQuery } from "state/api";
 
 const Daily = () => {
+  document.title = "Daily";
   const theme = useTheme();
   const [startDate, setStartDate] = useState(new Date("2021-02-01"));
   const [endDate, setEndDate] = useState(new Date("2021-03-01"));
