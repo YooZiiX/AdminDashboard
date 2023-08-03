@@ -4,6 +4,7 @@ import { ResponsiveLine } from "@nivo/line";
 import Header from "components/Header";
 import { useGetSalesQuery } from "state/api";
 
+//Ajouter un selecteur de courbure (curve="catmullRom")
 const Monthly = () => {
   const theme = useTheme();
   const { data } = useGetSalesQuery();
@@ -88,7 +89,7 @@ const Monthly = () => {
               reverse: false,
             }}
             yFormat=" >-.2f"
-            // curve="catmullRom"
+            curve="catmullRom"
             axisTop={null}
             axisRight={null}
             axisBottom={{
