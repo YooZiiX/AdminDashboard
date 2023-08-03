@@ -9,6 +9,7 @@ const Daily = () => {
   const theme = useTheme();
   const [startDate, setSstartDate] = useState(new Date("2021-02-01"));
   const [endDate, setEndDate] = useState(new Date("2021-03-01"));
+  const { data } = useGetSalesQuery();
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="Daily" subtitle="" />
