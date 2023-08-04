@@ -5,6 +5,8 @@ import Header from "components/Header";
 import { useGetAdminsQuery } from "state/api";
 
 const Admins = () => {
+  document.title = "Admins";
+  const theme = useTheme();
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="Admins" subtitle="Managing admins and list of admins." />
