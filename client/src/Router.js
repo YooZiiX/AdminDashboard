@@ -30,7 +30,7 @@ function Router({ theme }) {
             <Route path="/daily" element={<Daily />} />
             <Route path="/monthly" element={<Monthly />} />
             <Route path="/breakdown" element={<Breakdown />} />
-            <Route path="/admin" element={<Admins />} />
+            <Route path="/admins" element={<Admins />} />
           </Route>
         </Routes>
       </ThemeProvider>
