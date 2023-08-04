@@ -2,7 +2,7 @@ import React from "react";
 import { Box, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import Header from "components/Header";
-import CustomColumnMenu from "components/DataGridCustomColumnMenu";
+// import CustomColumnMenu from "components/DataGridCustomColumnMenu";
 import { useGetAdminsQuery } from "state/api";
 
 const Admins = () => {
@@ -83,9 +83,9 @@ const Admins = () => {
           getRowId={(row) => row._id}
           rows={data || []}
           columns={columns}
-          slots={{
-            columnMenu: CustomColumnMenu,
-          }}
+          // slots={{
+          //   columnMenu: CustomColumnMenu,
+          // }}
         />
       </Box>
     </Box>
