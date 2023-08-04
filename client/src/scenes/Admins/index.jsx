@@ -1,6 +1,8 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, useTheme } from "@mui/material";
+import { DataGrid } from "@mui/x-data-grid";
 import Header from "components/Header";
+import { useGetAdminsQuery } from "state/api";
 
 const Admins = () => {
   return (
