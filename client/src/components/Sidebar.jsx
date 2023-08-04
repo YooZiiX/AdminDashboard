@@ -194,7 +194,7 @@ const Sidebar = ({
           <Box
             position="fixed"
             bottom="0"
-            backgroundColor={theme.palette.primary[500]}
+            // backgroundColor={theme.palette.primary[500]}
             pb="2rem"
           >
             <Divider />
@@ -203,8 +203,8 @@ const Sidebar = ({
                 component="img"
                 alt="profile"
                 src={profileImage}
-                height="40px"
-                width="40px"
+                height="30px"
+                width="30px"
                 borderRadius="50%"
                 sx={{ objectFit: "cover" }}
               />
@@ -223,9 +223,11 @@ const Sidebar = ({
                   {user.occupation}
                 </Typography>
               </Box>
-              <SettingsOutlined
-                sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
-              />
+              <IconButton>
+                <SettingsOutlined
+                  sx={{ color: theme.palette.secondary[300], fontSize: "25px" }}
+                />
+              </IconButton>
             </FlexBetween>
           </Box>
         </Drawer>
