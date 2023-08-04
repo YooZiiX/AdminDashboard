@@ -2,11 +2,8 @@ import mongoose from "mongoose";
 
 const AffiliateStatSchema = new mongoose.Schema(
   {
-    userId: {
-      type: mongoose.Types.ObjectId,
-      ref: "User",
-    },
-    affiliateStat: {
+    userId: { type: mongoose.Types.ObjectId, ref: "User" },
+    affiliateSales: {
       type: [mongoose.Types.ObjectId],
       ref: "Transaction",
     },
@@ -14,5 +11,5 @@ const AffiliateStatSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const AffiliateStat = new mongoose.model("AffiliateStat", AffiliateStatSchema);
+const AffiliateStat = mongoose.model("AffiliateStat", AffiliateStatSchema);
 export default AffiliateStat;
