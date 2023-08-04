@@ -27,8 +27,8 @@ export const getUserPerformance = async (req, res) => {
       { $unwind: "$affiliateStats" },
     ]);
 
-    const saleTransactions = await Promise.amm(
-      userWithStats[0].affiliateStats.affiliateStats.map((id) => {
+    const saleTransactions = await Promise.all(
+      userWithStats[0].affiliateStats.affiliateSales.map((id) => {
         return Transaction.findById(id);
       })
     );
