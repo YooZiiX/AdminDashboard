@@ -41,18 +41,16 @@ export const getDashboardStats = async (req, res) => {
       return date === currentDate;
     });
 
-    res
-      .status(200)
-      .json({
-        totalCustomers,
-        yearlyTotalSoldUnits,
-        yearlySalesTotal,
-        monthlyData,
-        salesByCategory,
-        thisMonthStats,
-        todayStats,
-        transactions,
-      });
+    res.status(200).json({
+      totalCustomers,
+      yearlyTotalSoldUnits,
+      yearlySalesTotal,
+      monthlyData,
+      salesByCategory,
+      thisMonthStats,
+      todayStats,
+      transactions,
+    });
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
