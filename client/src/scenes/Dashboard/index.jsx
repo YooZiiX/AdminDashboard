@@ -18,6 +18,7 @@ import BreakdownChart from "components/BreakdownChart";
 import FlexBetween from "components/FlexBetween";
 import Header from "components/Header";
 import OverviewChart from "components/OverviewChart";
+import StatBox from "components/StatBox";
 import { useGetDashboardQuery } from "state/api";
 
 const Dashboard = () => {
@@ -76,6 +77,16 @@ const Dashboard = () => {
           </Button>
         </Box>
       </FlexBetween>
+      <Box
+        mt="20px"
+        display="grid"
+        gridTemplateColumns="repeat(12,1fr)"
+        gridAutoRows="160px"
+        gap="20px"
+        sx={{
+          "& > div": { gridColumn: isNonMediumScreens ? undefined : "span 12" },
+        }}
+      ></Box>
     </Box>
   );
 };
