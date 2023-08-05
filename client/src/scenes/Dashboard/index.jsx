@@ -22,6 +22,9 @@ import { useGetDashboardQuery } from "state/api";
 
 const Dashboard = () => {
   document.title = "Dashboard";
+  const theme = useTheme();
+  const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
+  const { data, isLoading } = useGetDashboardQuery();
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="Dashboard" subtitle="Welcome to your Dashboard." />
