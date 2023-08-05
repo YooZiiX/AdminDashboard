@@ -14,6 +14,10 @@ export const getUser = async (req, res) => {
 
 export const getDashboardStats = async (req, res) => {
   try {
+    const currentMonth = "November";
+    const currentYear = 2021;
+    const currentDay = "2021-11-15";
+    /* Recent transaction */
   } catch (error) {
     res.status(404).json({ message: error.message });
   }
