@@ -137,7 +137,7 @@ const Dashboard = () => {
           increase="+21%"
           description="Since last month"
           icon={
-            <PointOfSale
+            <Traffic
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
             />
           }
