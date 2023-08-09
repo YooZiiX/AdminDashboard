@@ -24,3 +24,11 @@ MERN is a technical stack that uses the following technologies :
 ### Back-End :
 
 > - [Mongoose](https://mongoosejs.com/) : MongoDB object modeling for NodeJS.
+
+## ENV File example (./.env)
+
+> PORT = 5000
+>
+> MONGO_URI = _**link**_
+>
+> NODE_ENV = development
