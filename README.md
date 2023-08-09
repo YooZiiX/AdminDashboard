@@ -18,7 +18,7 @@ MERN is a technical stack that uses the following technologies :
 
 ### Front-End :
 
-> - [MaterialUI]([https://tailwindcss.com/](https://mui.com/)) : React UI tool.
+> - [MaterialUI](https://mui.com/) : React UI tool.
 > - [Redux](https://redux.js.org/) : Open-source JS library for centralized status management.
 
 ### Back-End :
