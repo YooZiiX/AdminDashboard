@@ -26,6 +26,12 @@ MERN is a technical stack that uses the following technologies :
 
 > - [Mongoose](https://mongoosejs.com/) : MongoDB object modeling for NodeJS.
 
+## Various pages
+
+This different pages display various information, such as products, customers, transactions, sales and other administration information.
+
+Most of this information is summarized on the Dashboard, which is the Landing page.
+
 ## ENV File example (./.env)
 
 > PORT = 5000
