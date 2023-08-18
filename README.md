@@ -32,6 +32,8 @@ This different pages display various information, such as products, customers, t
 
 Most of this information is summarized on the Dashboard, which is the Landing page.
 
+Furthermore, thanks to MaterialUI and a custom theme that we've created, we've been able to implement the Light / Dark Mode functionality. 
+
 ## ENV File example (./.env)
 
 > PORT = 5000
